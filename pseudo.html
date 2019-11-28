@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo selectors</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+
+        .player {
+            text-align: center;
+        }
+
+        iframe {
+            margin: 40px 0;
+        }
+
+        button {
+            padding: 5px 5px;
+            border-radius: 60%;
+        }
+
+        button:nth-child(2) {
+            padding: 10px 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+        }
+
+        button:nth-child(2):hover {
+            background-color: burlywood;
+        }
+
+        button:nth-child(2):active {
+            background-color: aquamarine;
+        }
+
+        button:first-child::after {
+            content: "\2744";
+        }
+
+        button:last-child::before {
+            content: "\263C";
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="player">
+        <iframe width="727" height="409" src="https://www.youtube.com/embed/x30YOmfeVTE" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <form action="">
+            <button>&#8592;</button>
+            <button>&#8594;</button>
+            <button>&#9883;</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
